@@ -1,0 +1,61 @@
+
+
+<html>
+
+<head>
+  <title></title>
+<style type="text/css">
+body{background-color:black;color:white;}
+h1{font-family:tahoma;text-align:center;font-weight:bold;}
+#img{display:-webkit-box;-webkit-box-pack:center;opacity:0.8;}
+</style>
+<script type="text/javascript">
+
+var arr = [];
+ arr[0]= new Image();
+arr[0].src = "1.png"
+
+arr[1]= new Image();
+arr[1].src = "2.png";
+
+arr[2]= new Image();
+arr[2].src = "3.png";
+
+arr[3]= new Image();
+arr[3].src = "4.png";
+  
+arr[4]= new Image();
+arr[4].src = "5.png";
+  
+arr[5]= new Image();
+arr[5].src = "6.png";
+  
+arr[6]= new Image();
+arr[6].src = "7.png";
+  
+arr[7]= new Image();
+arr[7].src = "8.png";
+
+var i=0;
+
+function slide(){
+ document.getElementById("image1").src= arr[i].src;
+ i++;
+ if(i==arr.length){
+  i=0;
+ }
+ setTimeout(function(){ slide(); },200);
+}
+
+</script>
+</head>
+
+<body onLoad="slide('image1',arr);">
+<h1> MARTIAL ART WEBSITE</h1>
+<div id="img"><img id="image1" height="400px" width="600px" border="5" style="border-color:white;" /></div>
+
+
+
+</body>
+
+</html>
